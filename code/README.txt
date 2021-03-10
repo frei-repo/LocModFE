@@ -57,29 +57,24 @@
 * needs to be installed first according to the instruction given 
 * on www.dealii.org.
 *
-* Then, one possibility is to create a subdirectory
-* 
-* step-modfe
 *
-* in the deal.II examples folder that comes with the installation.
-*
-* Unpack all source files in this folder. Go to the build folder and type the 
+* For compilation create a build folder (for example in the code folder), enter this folder and type the 
 * following command in a terminal to create a Makefile
 *
-* cmake . 
+* cmake .. 
 *
 * The code can then be compiled by writing
 * 
 * make release
 *
-* in the same folder. To execute the examples, go to the test folder and run 
+* in the same folder. To execute the examples, go to the data folder and run 
 * the following command (for example 1)
 * 
-* ../build/step-modfe parameters_test_case_1.prm
+* ../code/build/step-modfe parameters_test_case_1.prm
 *
 * or, for Example 2 
 * 
-* ../build/step-modfe parameters_test_case_2.prm
+* ../code/build/step-modfe parameters_test_case_2.prm
 *
 * In the parameter files, one can among other options set and unset the boolean 
 * parameter {Use Hierarchical} to choose the basis to be used and select 
