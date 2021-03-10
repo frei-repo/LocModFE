@@ -1,0 +1,48 @@
+# Stefan Frei, Thomas Richter and Thomas Wick
+# Locally modified FEM
+#
+# Runtime parameters test case 1 
+# Studying convergence under mesh refinement
+# --------------------------------------------
+
+subsection Global parameters
+  
+  set Test case = 1
+  set Grid filename = unit_square.inp
+
+  # Basis name for output files, <number>.vtk will be appended
+  set Output filename = solution_case_1_
+
+  # Hierarchical or non-hierarchical basis functions
+  set Use hierarchical = true
+
+  # Number of global refinements before first computation
+  set Global ref = 2
+
+  # Number of refinement cycles
+  set Max cycles = 7
+
+  # Diffusion coefficients
+  set Visc 1 = 0.1
+  set Visc 2 = 1.0
+end
+
+
+subsection Solver parameters
+
+  # Use direct or iterative solver
+  set Direct linear solver = false
+
+  # When using an iterative solver,
+  # choose a preconditioner:
+  # none, jacobi, ssor
+  set Preconditioner type = ssor
+ 
+  # Further parameters for the 
+  # iterative linear solver
+  set Max linear iter      = 10000
+  set Tol linear solver    = 1e-12
+
+  # Relaxation parameter for SSOR scheme 
+  set Omega prec           = 1.2
+end

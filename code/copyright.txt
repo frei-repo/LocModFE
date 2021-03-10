@@ -1,0 +1,16 @@
+Copyright statement of the authors
+==================================
+
+Authors: Stefan Frei, Thomas Richter, Thomas Wick
+Date: May 8, 2018
+
+Statement:
+The source files are subject to the GNU Lesser General Public License
+(LGPL) as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later
+version. Please refer to the webpage http://www.dealii.org/
+under the link License for the text and further information
+on this license. You can use it, redistribute it, and/or
+modify it under the terms of this licence.
+
+

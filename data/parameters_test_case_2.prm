@@ -1,0 +1,49 @@
+# Stefan Frei, Thomas Richter, and Thomas Wick
+# Locally modified FEM
+#
+# Runtime parameters test case 2
+# Studying the dependence
+# on the interface position
+# --------------------------------------------
+
+subsection Global parameters
+  set Test case = 2
+  set Grid filename = unit_square.inp
+  
+  # Basis name for output files, <number>.vtk will be appended
+  set Output filename = solution_case_2_
+
+  # Hierarchical or non-hierarchical basis functions
+  set Use hierarchical = true
+
+  # Mesh refinement level
+  set Global ref = 6
+
+  # Number N of interface positions to be tested
+  # The interface is moved by 1/N * h in each step
+  set Max cycles = 1000
+
+  #Diffusion coefficients
+  set Visc 1 = 0.1
+  set Visc 2 = 1.0
+end
+
+
+subsection Solver parameters
+
+  # Use direct or iterative solver
+  set Direct linear solver = false
+
+  # When using an iterative solver,
+  # choose a preconditioner:
+  # none, jacobi, ssor
+  set Preconditioner type = ssor
+ 
+  # Further parameters for the 
+  # iterative linear solver
+  set Max linear iter      = 10000
+  set Tol linear solver    = 1e-12
+ 
+  # Relaxation parameter for SSOR scheme 
+  set Omega prec           = 1.2
+end

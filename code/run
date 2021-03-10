@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+bash Compile_and_run_test1.sh 
